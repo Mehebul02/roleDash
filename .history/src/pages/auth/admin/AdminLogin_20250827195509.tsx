@@ -8,23 +8,33 @@ export const AdminLogin = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const handleLogin = async (email: string, password: string) => {
-   
-    if (email && password ) {
-      
-      dispatch(
-        loginSuccess({
-          token: "admin-token",
-          role: "admin",
-          user: { email },
-        })
-      )
-      // Redirect to Admin Dashboard
-      navigate("/dashboard/admin")
-    } else {
-      throw new Error("Invalid email or password")
-    }
+ const handleLogin = async (email: string, password: string) => {
+  // Basic validation
+  if (!email || !password) {
+    throw new Error("Please fill in all fields")
   }
+
+  // Check for valid email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(email)) {
+    throw new Error("Please enter a valid email address")
+  }
+
+  // Fake authentication
+  if (email === "admin@company.com" && password === "admin123") {
+    dispatch(
+      loginSuccess({
+        token: "admin-token",
+        role: "admin",
+        user: { email },
+      })
+    )
+    navigate("/dashboard/admin")
+  } else {
+    throw new Error("Invalid email or password")
+  }
+}
+
 
   return (
     <Login
