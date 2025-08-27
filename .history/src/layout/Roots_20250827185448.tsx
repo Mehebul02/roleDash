@@ -1,12 +1,10 @@
-import { Outlet } from "react-router";
+import AdminLogin from "../pages/auth/admin/AdminLogin";
 
 
 const Roots = () => {
     return (
         <div>
        {/* <AdminLogin/> */}
-       {/* <h1>Home page</h1> */}
-        <Outlet />
         </div>
     );
 };

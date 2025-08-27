@@ -5,7 +5,7 @@ const Roots = () => {
     return (
         <div>
        {/* <AdminLogin/> */}
-       {/* <h1>Home page</h1> */}
+       <h1>Home page</h1>
         <Outlet />
         </div>
     );
