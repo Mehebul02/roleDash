@@ -41,3 +41,5 @@ RoleDash is a **role-based login and dashboard system** built with React, Redux,
 1. Clone the repository:
    ```bash
    git clone https://github.com/Mehebul02/roleDash.git
+
+   npm install
