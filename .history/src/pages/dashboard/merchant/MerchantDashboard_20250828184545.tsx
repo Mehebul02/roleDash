@@ -1,6 +1,6 @@
 // src/pages/dashboard/MerchantDashboard.tsx
 
-import { Dashboard, } from "@mui/icons-material"
+import { Dashboard, Notifications, People } from "@mui/icons-material"
 import DashboardLayout from "../../../components/DashboardLayout"
 import { Outlet } from "react-router"
 

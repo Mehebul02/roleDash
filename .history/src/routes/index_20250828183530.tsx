@@ -9,8 +9,6 @@ import OverviewDashboard from "../pages/dashboard/admin/Overview";
 import MerchantsPage from "../pages/dashboard/admin/Merchants";
 import MemberDashboard from "../pages/dashboard/member/MemberDashboard";
 import MemberOverView from "../pages/dashboard/member/MemberOverView";
-import MerchantDashboard from "../pages/dashboard/merchant/MerchantDashboard";
-import MerchantOverview from "../pages/dashboard/merchant/MerchantOverview";
 
 
 const router = createBrowserRouter([
@@ -55,16 +53,10 @@ const router = createBrowserRouter([
                         element: <MemberOverView />
                     },
                 ],
-            },
+            }
             {
                 path: "/dashboard/merchant",
-                element: <MerchantDashboard />,
-                children: [
-                    {
-                        index: true,
-                        element: <MerchantOverview />
-                    },
-                ],
+                element: <MerchantDashboard />
             }
 
         ]

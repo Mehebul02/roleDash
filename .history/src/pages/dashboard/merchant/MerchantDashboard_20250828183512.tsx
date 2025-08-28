@@ -1,6 +1,6 @@
 // src/pages/dashboard/MerchantDashboard.tsx
 
-import { Dashboard, } from "@mui/icons-material"
+import { Dashboard, Notifications, People } from "@mui/icons-material"
 import DashboardLayout from "../../../components/DashboardLayout"
 import { Outlet } from "react-router"
 
@@ -10,7 +10,8 @@ export default function MerchantDashboard() {
       title="Merchant Dashboard"
       menuItems={[
         { label: "Overview", icon: <Dashboard />, path: "/dashboard/merchant" },
-        
+        { label: "Notifications", icon: <Notifications />, path: "/dashboard/merchant/notifications" },
+        { label: "Customers", icon: <People />, path: "/dashboard/merchant/customers" },
       ]}
     >
       <Outlet />
