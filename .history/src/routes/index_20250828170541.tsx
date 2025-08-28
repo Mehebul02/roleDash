@@ -5,7 +5,6 @@ import { MerchantLogin } from "../pages/auth/Merchant";
 import { MemberLogin } from "../pages/auth/MemberLogin ";
 import AdminDashboard from "../pages/dashboard/admin/AdminDashboard";
 import UserDashboard from "../pages/dashboard/admin/UsersPage";
-import OverviewDashboard from "../pages/dashboard/admin/Overview";
 
 
 const router = createBrowserRouter([
@@ -27,17 +26,12 @@ const router = createBrowserRouter([
             },
             {
                 path: "/dashboard/admin",
-                element: <AdminDashboard />,
-                 children: [
-                    {
-                        index: true,
-                        element: <OverviewDashboard/>
-                    },
-          { path: "/dashboard/admin/users", element: <UserDashboard /> },
-          
-        ],
+                element: <DashboardLayout />
             },
-            
+            {
+                path:"/dashboard/admin/users",
+                element:<UserDashboard/>,
+            }
         ]
     }
 ])

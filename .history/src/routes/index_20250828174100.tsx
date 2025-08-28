@@ -32,7 +32,7 @@ const router = createBrowserRouter([
                     {
                         index: true,
                         element: <OverviewDashboard/>
-                    },
+                    }
           { path: "/dashboard/admin/users", element: <UserDashboard /> },
           
         ],

@@ -1,0 +1,28 @@
+import { createBrowserRouter } from "react-router-dom";
+import Roots from "../layout/Roots";
+import { AdminLogin } from "../pages/auth/AdminLogin";
+import { MerchantLogin } from "../pages/auth/Merchant";
+import { MemberLogin } from "../pages/auth/MemberLogin ";
+
+
+const router = createBrowserRouter([
+    {
+    
+            {
+                path: "/login/admin",
+                element: <AdminLogin />
+            },
+            {
+                path: "/login/merchant",
+                element: <MerchantLogin />
+            },
+            {
+                path: "/login/member",
+                element: <MemberLogin/>
+            },
+    
+    }
+])
+
+
+export default router
