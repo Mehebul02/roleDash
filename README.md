@@ -1,7 +1,6 @@
-
 # RoleDash
 
-RoleDash is a **role-based login and dashboard system** built with React, Redux, and React Router. It supports three user roles: Admin, Merchant, and Member, with role-specific dashboards and protected routing.  
+RoleDash is a **role-based login and dashboard system** built with React, Redux, and React Router. It supports three user roles: Admin, Merchant, and Member, each with role-specific dashboards and protected routing.
 
 ## Live Demo
 - Admin Login: [https://role-dash-sigma.vercel.app/login/admin](https://role-dash-sigma.vercel.app/login/admin)  
@@ -29,7 +28,7 @@ RoleDash is a **role-based login and dashboard system** built with React, Redux,
 - Merchant Dashboard: Approve Purchases, Lookup Customers, Set Contribution Rate, Notifications
 - Member Dashboard: Points Summary
 - State management with Redux
-- Simple and clean UI using TailwindCSS or Material-UI
+- Clean and simple UI using TailwindCSS or Material-UI
 
 ## Technologies Used
 - React
@@ -37,8 +36,8 @@ RoleDash is a **role-based login and dashboard system** built with React, Redux,
 - React Router
 - TailwindCSS / Material-UI
 
-## Installation 
+## Installation
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/Mehebul02/roleDash.git
-npm install
