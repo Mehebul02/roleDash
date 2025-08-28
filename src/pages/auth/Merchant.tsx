@@ -14,7 +14,7 @@ export const MerchantLogin = () => {
     if (!storeName || !password) throw new Error("Please fill in all fields")
 
     // Fake authentication
-    if (storeName === "my-store" && password === "merchant123") {
+    if (storeName === "store" && password === "merchant123") {
       dispatch(
         loginSuccess({
           token: "merchant-token",
