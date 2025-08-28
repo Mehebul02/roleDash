@@ -11,7 +11,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   redirectPath = "/login",
 }) => {
   const token = localStorage.getItem("token"); 
-  const role = localStorage.getItem("role");  
+  const role = localStorage.getItem("role");   // role check
 
   if (!token || role !== allowedRole) {
     return <Navigate to={redirectPath} replace />;

@@ -1,34 +1,35 @@
 import { createBrowserRouter } from "react-router";
 import { AdminLogin } from "../pages/auth/AdminLogin";
-
+import { MemberLogin } from "../pages/auth/MemberLogin ";
 import { MerchantLogin } from "../pages/auth/Merchant";
-
 import AdminDashboard from "../pages/dashboard/admin/AdminDashboard";
 import MerchantsPage from "../pages/dashboard/admin/Merchants";
 import OverviewDashboard from "../pages/dashboard/admin/Overview";
 import UserDashboard from "../pages/dashboard/admin/UsersPage";
-
 import MemberDashboard from "../pages/dashboard/member/MemberDashboard";
 import MemberOverView from "../pages/dashboard/member/MemberOverView";
-
 import MerchantDashboard from "../pages/dashboard/merchant/MerchantDashboard";
 import MerchantOverview from "../pages/dashboard/merchant/MerchantOverview";
-
-import Roots from "../layout/Roots";
 import ProtectedRoute from "./ProtectedRoute";
-import { MemberLogin } from "../pages/auth/MemberLogin ";
+import PublicRoute from "../components/PublicRoute";
+import Roots from "../layout/Roots";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Roots />,
     children: [
-      { path: "/", element: <AdminLogin /> }, 
-      { path: "/login/admin", element: <AdminLogin /> },
-      { path: "/login/merchant", element: <MerchantLogin /> },
-      { path: "/login/member", element: <MemberLogin /> },
+      {
+        element: <PublicRoute />, // login pages
+        children: [
+          { path: "/login/admin", element: <AdminLogin /> },
+          { path: "/login/merchant", element: <MerchantLogin /> },
+          { path: "/login/member", element: <MemberLogin /> },
+        ],
+      },
 
-      // Dashboards (protected)
+      // Admin Dashboard
       {
         element: <ProtectedRoute allowedRole="admin" redirectPath="/login/admin" />,
         children: [
@@ -44,6 +45,7 @@ const router = createBrowserRouter([
         ],
       },
 
+      // Merchant Dashboard
       {
         element: <ProtectedRoute allowedRole="merchant" redirectPath="/login/merchant" />,
         children: [
@@ -55,6 +57,7 @@ const router = createBrowserRouter([
         ],
       },
 
+      // Member Dashboard
       {
         element: <ProtectedRoute allowedRole="member" redirectPath="/login/member" />,
         children: [
@@ -68,5 +71,6 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
 
 export default router;
