@@ -5,11 +5,19 @@ import {
   Box,
   Typography,
   TextField,
-
+  IconButton,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  Chip,
   Menu,
   MenuItem,
 } from "@mui/material";
-
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
@@ -74,7 +82,7 @@ const UserDashboard = () => {
       />
 
       {/* User Table */}
-     <User_Table filteredUsers={filteredUsers} handleMenuOpen={handleMenuOpen}/>
+     <User_Table u/>
 
       {/* Dropdown Menu */}
       <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>

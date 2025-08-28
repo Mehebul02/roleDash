@@ -8,7 +8,6 @@ import UserDashboard from "../pages/dashboard/admin/UsersPage";
 import OverviewDashboard from "../pages/dashboard/admin/Overview";
 import MerchantsPage from "../pages/dashboard/admin/Merchants";
 import MemberDashboard from "../pages/dashboard/member/MemberDashboard";
-import MemberOverView from "../pages/dashboard/member/MemberOverView";
 
 
 const router = createBrowserRouter([
@@ -45,14 +44,14 @@ const router = createBrowserRouter([
                 ],
             },
             {
-                path: "/dashboard/member",
+                path: "/dashboard/",
                 element: <MemberDashboard />,
-                children: [
-                    {
-                        index: true,
-                        element: <MemberOverView />
-                    },
-                ],
+                // children: [
+                //     {
+                //         index: true,
+                //         element: <OverviewDashboard />
+                //     },
+                // ],
             }
 
         ]
