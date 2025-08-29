@@ -1,22 +1,18 @@
 import { createBrowserRouter } from "react-router";
 import { AdminLogin } from "../pages/auth/AdminLogin";
-
 import { MerchantLogin } from "../pages/auth/Merchant";
-
 import AdminDashboard from "../pages/dashboard/admin/AdminDashboard";
 import MerchantsPage from "../pages/dashboard/admin/Merchants";
 import OverviewDashboard from "../pages/dashboard/admin/Overview";
 import UserDashboard from "../pages/dashboard/admin/UsersPage";
-
 import MemberDashboard from "../pages/dashboard/member/MemberDashboard";
 import MemberOverView from "../pages/dashboard/member/MemberOverView";
-
 import MerchantDashboard from "../pages/dashboard/merchant/MerchantDashboard";
 import MerchantOverview from "../pages/dashboard/merchant/MerchantOverview";
-
 import Roots from "../layout/Roots";
 import ProtectedRoute from "./ProtectedRoute";
 import { MemberLogin } from "../pages/auth/MemberLogin ";
+import NotFoundPage from "../pages/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +61,10 @@ const router = createBrowserRouter([
           },
         ],
       },
+      {
+        path: "*",
+        element: <NotFoundPage/>,
+      }
     ],
   },
 ]);
